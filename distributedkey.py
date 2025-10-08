@@ -50,4 +50,8 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
+    # Log the application start
+    logging.getLogger(__name__).info("DistributedKey application started")
     main()
+    # Log the application exit
+    logging.getLogger(__name__).info("DistributedKey application exited successfully")
