@@ -48,6 +48,9 @@ def main():
     app = DistributedKey(verbose=args.verbose)
     if not app.run():
         sys.exit(1)
+    
+    # Log the application exit with return code
+    logging.getLogger(__name__).info(f"DistributedKey application exited with return code {sys.exc_info()[0]}")
 
 if __name__ == "__main__":
     # Log the application start
